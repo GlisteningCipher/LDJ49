@@ -9,16 +9,6 @@ public class GameManagerSO : ScriptableObject
         SceneManager.LoadScene("Game");
     }
 
-    public void Options()
-    {
-        Debug.Log("options");
-    }
-
-    public void Credits()
-    {
-        Debug.Log("credits");
-    }
-
     public void Exit()
     {
         Application.Quit();
