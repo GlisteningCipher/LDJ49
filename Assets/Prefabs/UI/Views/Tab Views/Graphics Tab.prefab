@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &512944014724469596
+--- !u!1001 &9154010634627655477
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -93,11 +93,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762341598581604024, guid: 8d5f5a45dc2492d479d0bdd36214da43, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8762341598581604024, guid: 8d5f5a45dc2492d479d0bdd36214da43, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8762341598581604024, guid: 8d5f5a45dc2492d479d0bdd36214da43, type: 3}
       propertyPath: m_AnchorMin.x
