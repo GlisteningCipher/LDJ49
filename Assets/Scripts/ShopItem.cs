@@ -13,6 +13,8 @@ public class ShopItem : MonoBehaviour
     public TMPro.TextMeshProUGUI DescriptionText; // Text display for description of item.
     public GameObject ItemPrefab; // Prefab of item you buy.
     public int ItemCost; // Cost of item.
+    [TextArea()] public string ItemDescription; // Description of item.
+    public Transform ItemPosition; // Where new item (usually a peg) will be placed, replaces existing.
 
     /// <summary>
     /// Checks if player has enough money and buys item if they do.
@@ -20,12 +22,33 @@ public class ShopItem : MonoBehaviour
     /// </summary>
     public void BUTTON_BuyItem()
     {
-        // TODO: Check player ball count.
-        Debug.Log("Buying item:" + ItemPrefab.name);
+        if (ScoreKeeper.instance.CurrScore < ItemCost)
+        {
+            Debug.LogWarning("You don't have enough money to buy!");
+            return;
+        }
+        ScoreKeeper.instance.CurrScore -= ItemCost;
+        StartCoroutine(BuyItemCR(ItemPosition, ItemPrefab));
+    }
+
+    /// <summary>
+    /// Replace existing item with newly bought item.
+    /// </summary>
+    IEnumerator BuyItemCR(Transform tr, GameObject itemPrefab)
+    {
+        // Add new object at position
+        var go = Instantiate(itemPrefab, tr.parent);
+        go.transform.position = tr.position;
+        // Remove old object
+        Destroy(tr.gameObject);
+        yield return null;
+        // Remove this shop item.
+        Destroy(gameObject);
     }
 
     private void Awake()
     {
         CostText.text = ItemCost.ToString();
+        DescriptionText.text = ItemDescription;
     }
 }
