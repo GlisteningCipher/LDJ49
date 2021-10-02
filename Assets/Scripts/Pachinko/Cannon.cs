@@ -18,6 +18,13 @@ public class Cannon : MonoBehaviour
     /// </summary>
     public void Fire()
     {
+        // Check score
+        if (ScoreKeeper.instance.CurrScore < 1)
+        {
+            Debug.LogWarning("Trying to shoot without balls!");
+            return;
+        }
+        ScoreKeeper.instance.CurrScore--;
         var go = Instantiate(BallPrefab);
         go.transform.position = transform.position;
         var rb = go.GetComponent<Rigidbody2D>();

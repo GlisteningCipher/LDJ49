@@ -8,6 +8,7 @@ using UnityEngine;
 public class ScoreKeeper : MonoBehaviour
 {
     public static ScoreKeeper instance = null;
+    public int StartScore = 10; // Number of balls player starts with.
     int currScore = 0; // Current score (i.e. # of balls)
     public int CurrScore
     {
@@ -32,6 +33,7 @@ public class ScoreKeeper : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        CurrScore = StartScore;
     }
 
     private void Update()
