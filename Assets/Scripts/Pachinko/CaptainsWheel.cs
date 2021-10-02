@@ -9,25 +9,38 @@ public class CaptainsWheel : MonoBehaviour
 {
     public Rigidbody2D WheelRB; // Rigidbody of rotating wheel.
     public Transform StageTr; // Transform of entire pachinko stage.
-    float currTilt => StageTr.rotation.z;
+    float currTilt // Current tilt (default 0, pos/neg)
+    {
+        get
+        { 
+            var raw = StageTr.rotation.eulerAngles.z;
+            return raw <= 180f ? raw : raw - 360f;
+        }
+    }
     float currAV => WheelRB.angularVelocity;
 
     float turnSpeed = 0f;
-    const float turnForce = 0.001f;
-    const float maxSpeed = 0.1f;
-    const float maxTilt = 0.2f;
-    const float smallTilt = 0.05f;
+    const float turnForce = 0.00001f;
+    const float maxSpeed = 0.5f;
+    const float maxTilt = 20f;
+    const float smallTilt = 0.5f;
 
     private void FixedUpdate()
     {
         if (Mathf.Abs(currAV) < smallTilt) return;
-        var dir = Mathf.Sign(currAV);
-        turnSpeed += dir * turnForce;
+        turnSpeed += currAV * turnForce;
         turnSpeed = Mathf.Clamp(turnSpeed, -1f * maxSpeed, maxSpeed);
 
-        if (Mathf.Abs(currTilt + turnSpeed) < maxTilt)
+        StageTr.Rotate(new Vector3(0f, 0f, turnSpeed));
+        Debug.Log(currTilt);
+        if (Mathf.Abs(currTilt) > maxTilt)
         {
-            StageTr.Rotate(new Vector3(0f, 0f, turnSpeed));
+            Quaternion q = new Quaternion();
+            q.eulerAngles = new Vector3(0f, 0f, maxTilt * Mathf.Sign(currTilt));
+            StageTr.rotation = q;
+            turnSpeed = 0f;
+            if (Mathf.Sign(currAV) == Mathf.Sign(currTilt))
+                WheelRB.angularVelocity = 0f;
         }
     }
 }
