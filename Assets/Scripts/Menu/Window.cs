@@ -12,12 +12,12 @@ public class Window : MonoBehaviour
         else transform.localScale = new Vector3(1, 0, 1);
     }
 
-    void Open()
+    public void Open()
     {
         transform.DOScaleY(1f, TWEEN_DURATION);
     }
 
-    void Close()
+    public void Close()
     {
         transform.DOScaleY(0f, TWEEN_DURATION);
     }

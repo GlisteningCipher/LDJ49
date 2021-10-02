@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7286239165096139244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224401483125068731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1778538568720284865
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,9 +548,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 7dc4e6af76185b54291653e03ce04a1e, type: 2}
-        m_TargetAssemblyTypeName: GameManagerSO, Assembly-CSharp
-        m_MethodName: Credits
+      - m_Target: {fileID: 8618235955947235116}
+        m_TargetAssemblyTypeName: Window, Assembly-CSharp
+        m_MethodName: Close
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1069,32 +1095,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7286239165096139244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224401483125068731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!1 &9052861720112646000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,9 +1216,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 7dc4e6af76185b54291653e03ce04a1e, type: 2}
-        m_TargetAssemblyTypeName: GameManagerSO, Assembly-CSharp
-        m_MethodName: Options
+      - m_Target: {fileID: 8618235955947235116}
+        m_TargetAssemblyTypeName: Window, Assembly-CSharp
+        m_MethodName: Close
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1235,6 +1235,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1133581412763667204, guid: 16ae4ae9beae5e6428f12225e065f73b, type: 3}
+      propertyPath: openOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6439621359178317844, guid: 16ae4ae9beae5e6428f12225e065f73b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1321,7 +1325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7556097963447680915, guid: 16ae4ae9beae5e6428f12225e065f73b, type: 3}
       propertyPath: m_Name
-      value: Main Screen
+      value: Main Window
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16ae4ae9beae5e6428f12225e065f73b, type: 3}
@@ -1330,6 +1334,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7556097963447680915, guid: 16ae4ae9beae5e6428f12225e065f73b, type: 3}
   m_PrefabInstance: {fileID: 8656294212904971304}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8618235955947235116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1133581412763667204, guid: 16ae4ae9beae5e6428f12225e065f73b, type: 3}
+  m_PrefabInstance: {fileID: 8656294212904971304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224401483125068731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404e5538c27fd124c9b973a40084a322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2413775712628501564 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6439621359178317844, guid: 16ae4ae9beae5e6428f12225e065f73b, type: 3}

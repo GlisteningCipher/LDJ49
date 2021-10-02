@@ -425,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2413775712628501564, guid: 6673fcf78f2894442b2bb66306cd5072, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2413775712628501564, guid: 6673fcf78f2894442b2bb66306cd5072, type: 3}
       propertyPath: m_AnchorMax.x
@@ -546,6 +546,18 @@ PrefabInstance:
     - target: {fileID: 7376883764898609771, guid: 6673fcf78f2894442b2bb66306cd5072, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618235955947235116, guid: 6673fcf78f2894442b2bb66306cd5072, type: 3}
+      propertyPath: activationEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618235955947235116, guid: 6673fcf78f2894442b2bb66306cd5072, type: 3}
+      propertyPath: activationEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618235955947235116, guid: 6673fcf78f2894442b2bb66306cd5072, type: 3}
+      propertyPath: activationEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6673fcf78f2894442b2bb66306cd5072, type: 3}
