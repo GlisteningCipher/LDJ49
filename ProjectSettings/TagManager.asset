@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ball
   layers:
   - Default
   - TransparentFX
@@ -43,4 +44,7 @@ TagManager:
     locked: 0
   - name: Entity
     uniqueID: 2139994393
+    locked: 0
+  - name: UI
+    uniqueID: 4294773471
     locked: 0

@@ -13,7 +13,9 @@ namespace Dialog
         public TMPro.TextMeshProUGUI DialogText; // Text for spoken dialog
         public float DisplayDelay = 0.1f; // How fast text displays
         public int DisplayBatch = 3; // How many characters are displayed at once
+        public float HideDelay = 3f; // How long to wait after showing text completely to hide
         public List<string> allLines; // All lines of dialog in order
+        public UnityEngine.UI.Image PortraitSpriteSR; // Sprite for portrait
 
         TMProFX.ColorOverride textHider => GetComponent<TMProFX.ColorOverride>(); // Makes text transparent
         int currLine; // Current line index
@@ -77,16 +79,38 @@ namespace Dialog
                     textHider.Indeces[0] += DisplayBatch;
                 textHider.UpdateVertices();
             }
+            displayCR = null;
         }
 
         /// <summary>
         /// Add a new line to the end of current dialog and immediately show it.
+        /// Hides after some number of seconds.
         /// </summary>
         /// <param name="newLine"></param>
-        public void ShowImmediate(string newLine)
+        public void ShowAndHide(string newLine)
         {
+            DialogText.text = "";
+            gameObject.SetActive(true); // Show blank dialog box
+            StartCoroutine(ShowAndHideCR(newLine));
+        }
+        IEnumerator ShowAndHideCR(string newLine)
+        {
+            yield return null;
             AddLine(newLine);
-            ShowLine(currLine = allLines.Count - 1);
+            ShowLine(currLine = allLines.Count - 1); // Show dialog
+            yield return null;
+            yield return new WaitUntil(() => displayCR == null); // Wait for scroll to finish
+            yield return new WaitForSeconds(HideDelay); // Wait for delay
+            gameObject.SetActive(false); // Hide dialog box
+        }
+
+        /// <summary>
+        /// Displays a dialog bark.
+        /// </summary>
+        public void ShowDialogBark(DialogBark bark)
+        {
+            PortraitSpriteSR.sprite = bark.PortraitSprite;
+            ShowAndHide(bark.DialogText);
         }
 
         private void Awake()
