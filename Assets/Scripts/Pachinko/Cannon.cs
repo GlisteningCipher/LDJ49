@@ -9,9 +9,8 @@ public class Cannon : MonoBehaviour
 {
     public GameObject BallPrefab;
     public Transform ShootingDirection; // Object position to align shooting.
-    public float ShootStrength;
-
-    const float rotateSpeed = 1f; // Speed of rotating cannon.
+    public float ShootStrength = 800;
+    public float RotateSpeed = 0.5f;
 
     /// <summary>
     /// Fire a ball.
@@ -39,7 +38,7 @@ public class Cannon : MonoBehaviour
             Fire();
         }
         var axis = Input.GetAxis("Horizontal");
-        transform.Rotate(new Vector3(0f, 0f, rotateSpeed * axis));
+        transform.Rotate(new Vector3(0f, 0f, RotateSpeed * axis));
 
     }
 }
