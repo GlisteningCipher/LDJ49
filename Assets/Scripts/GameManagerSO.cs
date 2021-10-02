@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(fileName = "Game Manager", menuName = "Managers/Game Manager", order = 1)]
 public class GameManagerSO : ScriptableObject
 {
     public void Play()
     {
-        Debug.Log("play");
+        SceneManager.LoadScene("Game");
     }
 
     public void Options()
@@ -20,6 +21,6 @@ public class GameManagerSO : ScriptableObject
 
     public void Exit()
     {
-        Debug.Log("exit");
+        Application.Quit();
     }
 }
