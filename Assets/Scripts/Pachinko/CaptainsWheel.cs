@@ -32,7 +32,6 @@ public class CaptainsWheel : MonoBehaviour
         turnSpeed = Mathf.Clamp(turnSpeed, -1f * maxSpeed, maxSpeed);
 
         StageTr.Rotate(new Vector3(0f, 0f, turnSpeed));
-        Debug.Log(currTilt);
         if (Mathf.Abs(currTilt) > maxTilt)
         {
             Quaternion q = new Quaternion();
