@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CostText: {fileID: 5229794697526257629}
   DescriptionText: {fileID: 6889910262025751232}
-  ItemCost: 5
-  ItemDescription: Replace a random peg with a seesaw.
-  seesawPrefab: {fileID: 3357182450520123131, guid: 99c33a0d2bcebd74cb1b31e8ac58bde3, type: 3}
+  ItemCost: 2
+  ItemDescription: Makes a random peg bouncy.
+  replacementObject: {fileID: 5053969092337499476, guid: 8d4f50173f1bed24fb58bb4b5ac0e354, type: 3}
 --- !u!1001 &640062205161212389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6303937553863267727, guid: 2bd5c6f34f9c48a428d86cb8964e7f68, type: 3}
       propertyPath: m_Name
-      value: Replace Peg Item
+      value: Bouncy Peg Item
       objectReference: {fileID: 0}
     - target: {fileID: 6303937554950496601, guid: 2bd5c6f34f9c48a428d86cb8964e7f68, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
