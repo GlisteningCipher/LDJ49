@@ -1,52 +1,55 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TabGroup : MonoBehaviour
+namespace MenuUI
 {
-    public List<TabButton> tabButtons;
-    public Sprite tabIdle;
-    public Sprite tabHover;
-    public Sprite tabActive;
-    public List<GameObject> objectsToSwap;
-
-    TabButton selectedTab;
-
-    void OnEnable()
+    public class TabGroup : MonoBehaviour
     {
-        if (tabButtons == null) tabButtons = new List<TabButton>();
-        if (tabButtons.Count > 0) OnTabSelected(tabButtons[0]);
-    }
+        public List<TabButton> tabButtons;
+        public Sprite tabIdle;
+        public Sprite tabHover;
+        public Sprite tabActive;
+        public List<GameObject> objectsToSwap;
 
-    public void OnTabEnter(TabButton button)
-    {
-        ResetTabs();
-        if (button != selectedTab)
-            button.background.sprite = tabHover;
-    }
+        TabButton selectedTab;
 
-    public void OnTabExit(TabButton button)
-    {
-        ResetTabs();
-    }
-
-    public void OnTabSelected(TabButton button)
-    {
-        selectedTab = button;
-        button.background.sprite = tabActive;
-        ResetTabs();
-        int index = button.transform.GetSiblingIndex();
-        for (int i = 0; i < objectsToSwap.Count; ++i)
+        void OnEnable()
         {
-            objectsToSwap[i]?.SetActive(i == index);
+            if (tabButtons == null) tabButtons = new List<TabButton>();
+            if (tabButtons.Count > 0) OnTabSelected(tabButtons[0]);
         }
-    }
 
-    public void ResetTabs()
-    {
-        foreach (TabButton button in tabButtons)
+        public void OnTabEnter(TabButton button)
         {
-            if (button == selectedTab) continue;
-            button.background.sprite = tabIdle;
+            ResetTabs();
+            if (button != selectedTab)
+                button.background.sprite = tabHover;
+        }
+
+        public void OnTabExit(TabButton button)
+        {
+            ResetTabs();
+        }
+
+        public void OnTabSelected(TabButton button)
+        {
+            selectedTab = button;
+            button.background.sprite = tabActive;
+            ResetTabs();
+            int index = button.transform.GetSiblingIndex();
+            for (int i = 0; i < objectsToSwap.Count; ++i)
+            {
+                objectsToSwap[i]?.SetActive(i == index);
+            }
+        }
+
+        public void ResetTabs()
+        {
+            foreach (TabButton button in tabButtons)
+            {
+                if (button == selectedTab) continue;
+                button.background.sprite = tabIdle;
+            }
         }
     }
 }
