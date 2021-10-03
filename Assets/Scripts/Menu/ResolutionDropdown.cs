@@ -10,13 +10,9 @@ public class ResolutionDropdown : MonoBehaviour
     void Start()
     {
         TMP_Dropdown dropdown = GetComponent<TMP_Dropdown>();
-        List<string> resolutionStrings = new List<string>();
-
-        foreach (Resolution res in settings.resolutions)
-            resolutionStrings.Add(res.width + "x" + res.height);
         dropdown.ClearOptions();
-        dropdown.AddOptions(resolutionStrings);
-        dropdown.value = resolutionStrings.IndexOf(Screen.width + "x" + Screen.height);
+        dropdown.AddOptions(settings.resolutionStrings);
+        dropdown.value = settings.resolutionStrings.IndexOf(Screen.width + "x" + Screen.height);
         dropdown.onValueChanged.AddListener(settings.SetResolution);
     }
 }
