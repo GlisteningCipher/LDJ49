@@ -33,12 +33,12 @@ public class Cannon : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetButtonDown("Jump"))
         {
             Fire();
         }
         var axis = Input.GetAxis("Horizontal");
-        transform.Rotate(new Vector3(0f, 0f, RotateSpeed * axis));
+        transform.Rotate(new Vector3(0f, 0f, RotateSpeed * axis * -1));
     }
 
     /// <summary>
