@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 /// <summary>
 /// Single item for buying/upgrading pegs/buckets.

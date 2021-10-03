@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -12,15 +10,16 @@ public class CaptainsWheel : MonoBehaviour
     float currTilt // Current tilt (default 0, pos/neg)
     {
         get
-        { 
+        {
             var raw = StageTr.rotation.eulerAngles.z;
             return raw <= 180f ? raw : raw - 360f;
         }
     }
     float currAV => WheelRB.angularVelocity;
 
+    public float turnForce = 0.00001f;
+
     float turnSpeed = 0f;
-    const float turnForce = 0.00001f;
     const float maxSpeed = 0.5f;
     const float maxTilt = 20f;
     const float smallTilt = 0.5f;
