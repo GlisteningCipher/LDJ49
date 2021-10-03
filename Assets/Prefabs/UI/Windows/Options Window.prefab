@@ -58,7 +58,7 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: 200
   m_MinHeight: -1
-  m_PreferredWidth: 200
+  m_PreferredWidth: 250
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -143,9 +143,9 @@ MonoBehaviour:
   - {fileID: 8447878700637512440}
   - {fileID: 6630672288811048640}
   - {fileID: 3022124929251971265}
-  tabIdle: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  tabHover: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  tabActive: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  tabIdle: {fileID: 21300000, guid: 16cd75a6006352a4e8f13aec3d7c1e76, type: 3}
+  tabHover: {fileID: 21300000, guid: 16cd75a6006352a4e8f13aec3d7c1e76, type: 3}
+  tabActive: {fileID: 21300000, guid: 16cd75a6006352a4e8f13aec3d7c1e76, type: 3}
   objectsToSwap:
   - {fileID: 4399627109581856558}
   - {fileID: 8328824059148869370}
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -338,6 +338,14 @@ PrefabInstance:
     - target: {fileID: 6522162808812234529, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
       propertyPath: m_text
       value: Gameplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522162808812234529, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522162808812234529, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 6522162809706411118, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
       propertyPath: m_Name
@@ -377,7 +385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6522162809706411119, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6522162809706411119, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -673,7 +681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9070968167325862898, guid: c8fb1702f051b0644930813ebd74f425, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9070968167325862898, guid: c8fb1702f051b0644930813ebd74f425, type: 3}
       propertyPath: m_LocalPosition.x
@@ -740,6 +748,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Graphics
       objectReference: {fileID: 0}
+    - target: {fileID: 6522162808812234529, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522162808812234529, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 6522162809706411118, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
       propertyPath: m_Name
       value: Graphics Tab
@@ -778,7 +794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6522162809706411119, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6522162809706411119, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -861,6 +877,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Audio
       objectReference: {fileID: 0}
+    - target: {fileID: 6522162808812234529, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522162808812234529, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 6522162809706411118, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
       propertyPath: m_Name
       value: Audio Tab
@@ -899,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6522162809706411119, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6522162809706411119, guid: 32de5a939cb44954fb1de5dea9b3bc0a, type: 3}
       propertyPath: m_LocalPosition.x
