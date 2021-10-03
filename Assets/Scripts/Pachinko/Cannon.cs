@@ -39,6 +39,13 @@ public class Cannon : MonoBehaviour
         }
         var axis = Input.GetAxis("Horizontal");
         transform.Rotate(new Vector3(0f, 0f, RotateSpeed * axis));
+    }
 
+    /// <summary>
+    /// Set a new ball type.
+    /// </summary>
+    public void SetBall(GameObject ballPrefab)
+    {
+        BallPrefab = ballPrefab;
     }
 }
