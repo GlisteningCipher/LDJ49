@@ -11,7 +11,6 @@ public class ScoreEvent : UnityEvent<Bucket, Ball> { }
 public class Bucket : MonoBehaviour
 {
     public int BucketMultipler = 1; // Multiplies score.
-    public TMPro.TextMeshPro MultiplierText;
     ScoreEvent scoreEvent;
     Collider2D col;
 
@@ -22,10 +21,6 @@ public class Bucket : MonoBehaviour
         scoreEvent.AddListener(ScoreKeeper.instance.Score);
     }
 
-    private void Update()
-    {
-        MultiplierText.text = BucketMultipler.ToString() + "x";
-    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
