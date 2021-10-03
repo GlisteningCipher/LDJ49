@@ -15,6 +15,8 @@ public class CollisionFXParent : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.relativeVelocity.magnitude < 2) return;
+
         string type = collision.gameObject.tag;
         switch(type)
         {
