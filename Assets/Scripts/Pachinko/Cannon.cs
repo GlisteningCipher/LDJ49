@@ -9,6 +9,7 @@ public class Cannon : MonoBehaviour
 {
     public GameObject BallPrefab;
     public Transform ShootingDirection; // Object position to align shooting.
+    public AudioSource shootSFX;
     public float ShootStrength = 800;
     public float RotateSpeed = 0.5f;
 
@@ -29,6 +30,7 @@ public class Cannon : MonoBehaviour
         var rb = go.GetComponent<Rigidbody2D>();
         Vector2 dir = Vector3.Normalize(ShootingDirection.position - transform.position);
         rb.AddForce(ShootStrength * dir);
+        shootSFX.PlayOneShot(shootSFX.clip);
     }
 
     private void Update()
