@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 2e850100f337307488242325e3a0b770, type: 2}
+    - target: {fileID: 2885705894613120501, guid: b662371aa4dbfc94fae02b5aeb02015d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.17260063
+      objectReference: {fileID: 0}
     - target: {fileID: 2885705894613120502, guid: b662371aa4dbfc94fae02b5aeb02015d, type: 3}
       propertyPath: m_Name
       value: Bouncy Peg

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ReplacePegItem : ShopItem
 {
-    public GameObject seesawPrefab;
+    public GameObject replacementObject;
 
     /// <summary>
     /// Replace existing item with newly bought item.
@@ -12,7 +12,7 @@ public class ReplacePegItem : ShopItem
         GameObject[] pegs = GameObject.FindGameObjectsWithTag("Peg");
         GameObject randomPeg = pegs[Random.Range(0, pegs.Length)];
         // Add new object at position
-        var go = Instantiate(seesawPrefab, randomPeg.transform.parent);
+        var go = Instantiate(replacementObject, randomPeg.transform.parent);
         go.transform.position = randomPeg.transform.position;
         // Remove old object
         Destroy(randomPeg);
