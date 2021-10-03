@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 6303937553863267723}
   - component: {fileID: 6303937553863267720}
   - component: {fileID: 6303937553863267721}
-  - component: {fileID: 4916001875902554370}
   m_Layer: 5
   m_Name: ShopItemBase
   m_TagString: Untagged
@@ -261,24 +260,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &4916001875902554370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6303937553863267727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8658b47ff9ce2494ebdfc491248ce18f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CostText: {fileID: 4643778283279724088}
-  DescriptionText: {fileID: 6303937553767891749}
-  ItemPrefab: {fileID: 0}
-  ItemCost: 0
-  ItemDescription: 
-  ItemPosition: {fileID: 0}
 --- !u!1 &6303937554071369969
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,19 +515,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6303937554950496600}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4916001875902554370}
-        m_TargetAssemblyTypeName: ShopItem, Assembly-CSharp
-        m_MethodName: BUTTON_BuyItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &6303937554950496602
 MonoBehaviour:
   m_ObjectHideFlags: 0
