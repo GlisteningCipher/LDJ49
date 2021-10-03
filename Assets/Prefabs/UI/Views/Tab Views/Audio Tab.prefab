@@ -149,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 921633542068795157, guid: 76cdbcc644e971e46a8c06264bbfadea, type: 3}
       propertyPath: m_text
-      value: Ambience
+      value: Ambiance
       objectReference: {fileID: 0}
     - target: {fileID: 2645040549357632938, guid: 76cdbcc644e971e46a8c06264bbfadea, type: 3}
       propertyPath: m_AnchorMax.y
