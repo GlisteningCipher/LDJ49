@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798e3094a159acc409cbac4ed787c24a, type: 3}
+  m_Name: FailureGreen2
+  m_EditorClassIdentifier: 
+  PortraitSpriteDay: {fileID: 21300000, guid: 76ce88aa80b924e49b0d75826fa367b5, type: 3}
+  PortraitSpriteNight: {fileID: 21300000, guid: 5d63d54b08d52054c873aa9b3a1d88de, type: 3}
+  DialogText: "Vision\u2026 going dark\u2026 hope\u2026 fading\u2026\r"

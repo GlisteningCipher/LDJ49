@@ -8,26 +8,34 @@ using UnityEngine;
 public class DialogManager : MonoBehaviour
 {
     public Dialog.DialogBox Box;
-    public List<DialogBark> Barks; // List of all barks.
+    public List<DialogBark> tiltBarks; // List of all barks that play when the boat tilts
+    public List<DialogBark> purchaseBarks; // when a purchase is made
+    public List<DialogBark> scoreBarks; // when 3x score get!
+    public List<DialogBark> failureBarks; // when a ball has failed to get in for a while
+    public List<DialogBark> inactivityBarks; // when the player is inactive
 
-    const float minWait = 8f;
-    const float maxWait = 16f;
-
-    private void Start()
+    public void ShowTiltBark()
     {
-        StartCoroutine(BarkLoopCR());
+        if(!Box.isShowingDialog) Box.ShowDialogBark(tiltBarks[Random.Range(0, tiltBarks.Count)]);
     }
 
-    /// <summary>
-    /// Show barks every few random seconds.
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator BarkLoopCR()
+    public void ShowPurchaseBark()
     {
-        for(; ; )
-        {
-            yield return new WaitForSeconds(Random.Range(minWait, maxWait));
-            Box.ShowDialogBark(Barks[Random.Range(0, Barks.Count)]);
-        }
+        if (!Box.isShowingDialog) Box.ShowDialogBark(purchaseBarks[Random.Range(0, purchaseBarks.Count)]);
+    }
+
+    public void ShowScoreBark()
+    {
+        if (!Box.isShowingDialog) Box.ShowDialogBark(scoreBarks[Random.Range(0, scoreBarks.Count)]);
+    }
+
+    public void ShowFailureBark()
+    {
+        if (!Box.isShowingDialog) Box.ShowDialogBark(failureBarks[Random.Range(0, failureBarks.Count)]);
+    }
+
+    public void ShowInactivityBark()
+    {
+        if (!Box.isShowingDialog) Box.ShowDialogBark(inactivityBarks[Random.Range(0, inactivityBarks.Count)]);
     }
 }
