@@ -74,19 +74,20 @@ namespace Dialog
         IEnumerator ShowLineCR(int ind)
         {
             string txt = allLines[ind];
-            textHider.Indeces[0] = Mathf.Min(DisplayBatch, txt.Length); // Start with first batch shown.
-            textHider.Indeces[1] = txt.Length + 1;
+            // textHider.Indeces[0] = Mathf.Min(DisplayBatch, txt.Length); // Start with first batch shown.
+            // textHider.Indeces[1] = txt.Length + 1;
             yield return null;
             DialogText.text = txt;
-            while (textHider.Indeces[0] < txt.Length)
-            {
-                yield return new WaitForSeconds(DisplayDelay);
-                if (textHider.Indeces[0] + DisplayBatch >= txt.Length)
-                    textHider.Indeces[0] = txt.Length;
-                else
-                    textHider.Indeces[0] += DisplayBatch;
-                textHider.UpdateVertices();
-            }
+            yield return new WaitForSeconds(DisplayDelay * DialogText.text.Length);
+            // while (textHider.Indeces[0] < txt.Length)
+            // {
+            //    yield return new WaitForSeconds(DisplayDelay);
+            //    if (textHider.Indeces[0] + DisplayBatch >= txt.Length)
+            //        textHider.Indeces[0] = txt.Length;
+            //    else
+            //        textHider.Indeces[0] += DisplayBatch;
+            //    textHider.UpdateVertices();
+            // }
             displayCR = null;
         }
 

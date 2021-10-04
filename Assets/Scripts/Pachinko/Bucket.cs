@@ -14,6 +14,8 @@ public class Bucket : MonoBehaviour
     ScoreEvent scoreEvent;
     Collider2D col;
 
+    public DialogManager dm;
+
     void Awake()
     {
         scoreEvent = new ScoreEvent();
@@ -24,6 +26,10 @@ public class Bucket : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Ball") scoreEvent.Invoke(this, other.gameObject.GetComponent<Ball>());
+        if (other.tag == "Ball")
+        {
+            scoreEvent.Invoke(this, other.gameObject.GetComponent<Ball>());
+            if (BucketMultipler == 3) dm.ShowScoreBark();
+        }
     }
 }

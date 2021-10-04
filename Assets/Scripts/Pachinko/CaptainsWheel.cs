@@ -7,6 +7,9 @@ public class CaptainsWheel : MonoBehaviour
 {
     public Rigidbody2D WheelRB; // Rigidbody of rotating wheel.
     public Transform StageTr; // Transform of entire pachinko stage.
+
+    public DialogManager dm;
+
     float currTilt // Current tilt (default 0, pos/neg)
     {
         get
@@ -33,12 +36,17 @@ public class CaptainsWheel : MonoBehaviour
         StageTr.Rotate(new Vector3(0f, 0f, turnSpeed));
         if (Mathf.Abs(currTilt) > maxTilt)
         {
+            
             Quaternion q = new Quaternion();
             q.eulerAngles = new Vector3(0f, 0f, maxTilt * Mathf.Sign(currTilt));
             StageTr.rotation = q;
             turnSpeed = 0f;
             if (Mathf.Sign(currAV) == Mathf.Sign(currTilt))
+            {
                 WheelRB.angularVelocity = 0f;
+                dm.ShowTiltBark();
+            }
+                
         }
     }
 }
