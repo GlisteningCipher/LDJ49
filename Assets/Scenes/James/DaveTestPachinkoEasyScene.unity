@@ -3458,6 +3458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartScore: 10
   ScoreText: {fileID: 1725308739}
+  dialog: {fileID: 711725342}
 --- !u!223 &1247364215
 Canvas:
   m_ObjectHideFlags: 0

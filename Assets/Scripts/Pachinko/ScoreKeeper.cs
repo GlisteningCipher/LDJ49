@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -19,6 +17,7 @@ public class ScoreKeeper : MonoBehaviour
         }
     }
     public TMPro.TextMeshProUGUI ScoreText;
+    [SerializeField] DialogManager dialog;
 
     /// <summary>
     /// Calculate score when ball hits bucket, and destroys ball.
@@ -28,12 +27,27 @@ public class ScoreKeeper : MonoBehaviour
     {
         CurrScore += bucket.BucketMultipler * ball.BallScore;
         Destroy(ball.gameObject);
+        CancelInvoke();
+        Invoke("NoScoreBarkEvent", 30f);
+    }
+
+    void NoScoreBarkEvent()
+    {
+        dialog.ShowFailureBark();
+        Invoke("InactivityBarkEvent", 30f);
+    }
+
+    void InactivityBarkEvent()
+    {
+        dialog.ShowFailureBark();
+        Invoke("NoScoreBarkEvent", 30f);
     }
 
     private void Awake()
     {
         instance = this;
         CurrScore = StartScore;
+        if (dialog != null) Invoke("NoScoreBarkEvent", 30f);
     }
 
     private void Update()
