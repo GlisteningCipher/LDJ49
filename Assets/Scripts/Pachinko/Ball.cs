@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -8,4 +7,10 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public int BallScore = 1; // Base score value.
+
+    IEnumerator Start()
+    {
+        yield return new WaitForSeconds(10f);
+        Destroy(this.gameObject);
+    }
 }
