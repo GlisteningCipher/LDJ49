@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798e3094a159acc409cbac4ed787c24a, type: 3}
+  m_Name: ScoreBlue
+  m_EditorClassIdentifier: 
+  PortraitSpriteDay: {fileID: 21300000, guid: f81e04324a7ec0145974e69c8032a7b0, type: 3}
+  PortraitSpriteNight: {fileID: 21300000, guid: 60f58391de89b4e4ba307b104f1e1746, type: 3}
+  DialogText: "We\u2019ll see how long their luck lasts...\r"

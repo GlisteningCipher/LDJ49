@@ -8,7 +8,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "DialogBark")]
 public class DialogBark : ScriptableObject
 {
-    public Sprite PortraitSprite;
+    public Sprite PortraitSpriteDay;
+    public Sprite PortraitSpriteNight;
     [TextArea()]
     public string DialogText;
 }

@@ -16,6 +16,14 @@ namespace Dialog
         public float HideDelay = 3f; // How long to wait after showing text completely to hide
         public List<string> allLines; // All lines of dialog in order
         public UnityEngine.UI.Image PortraitSpriteSR; // Sprite for portrait
+        public UnityEngine.UI.Image PortraitSpriteFrame;
+
+        public bool isShowingDialog = false;
+
+        public Sprite dayBG;
+        public Sprite nightBG;
+
+        public DayNightCycle dnc;
 
         TMProFX.ColorOverride textHider => GetComponent<TMProFX.ColorOverride>(); // Makes text transparent
         int currLine; // Current line index
@@ -95,6 +103,7 @@ namespace Dialog
         }
         IEnumerator ShowAndHideCR(string newLine)
         {
+            isShowingDialog = true;
             yield return null;
             AddLine(newLine);
             ShowLine(currLine = allLines.Count - 1); // Show dialog
@@ -102,6 +111,7 @@ namespace Dialog
             yield return new WaitUntil(() => displayCR == null); // Wait for scroll to finish
             yield return new WaitForSeconds(HideDelay); // Wait for delay
             gameObject.SetActive(false); // Hide dialog box
+            isShowingDialog = false;
         }
 
         /// <summary>
@@ -109,7 +119,24 @@ namespace Dialog
         /// </summary>
         public void ShowDialogBark(DialogBark bark)
         {
-            PortraitSpriteSR.sprite = bark.PortraitSprite;
+            if (dnc != null)
+            {
+                if(dnc.isDay)
+                {
+                    PortraitSpriteSR.sprite = bark.PortraitSpriteDay;
+                    PortraitSpriteFrame.sprite = dayBG;
+                }
+                else
+                {
+                    PortraitSpriteSR.sprite = bark.PortraitSpriteNight;
+                    PortraitSpriteFrame.sprite = nightBG;
+                }
+                
+            }
+            else
+            {
+                PortraitSpriteSR.sprite = bark.PortraitSpriteDay;
+            }
             ShowAndHide(bark.DialogText);
         }
 
