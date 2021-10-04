@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 371fbe457fe43ed49b5965ed1041e01d, type: 3}
+        m_Texture: {fileID: 2800000, guid: ce711d506497826488ec07901c804e89, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -56,9 +56,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_39d692e1e6fe46b7b19b7d9a246fb343: -0.1
+    - Vector1_39d692e1e6fe46b7b19b7d9a246fb343: 0
     - Vector1_5d599889746642fea1a24454b9a627e4: 0.11
-    - Vector1_dba4e6b134ec4efb875004b592e27ff2: 0.5
+    - Vector1_dba4e6b134ec4efb875004b592e27ff2: 0.35
     - _EnableExternalAlpha: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
