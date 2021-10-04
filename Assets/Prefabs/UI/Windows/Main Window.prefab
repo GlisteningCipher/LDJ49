@@ -65,17 +65,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <TITLE>
+  m_text: PASINKO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b31c02b0a913421408b2add08542264c, type: 2}
+  m_sharedMaterial: {fileID: -9002973016389683323, guid: b31c02b0a913421408b2add08542264c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279966826
+  m_fontColor: {r: 0.4156863, g: 0.10980393, b: 0.10588236, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 128
+  m_fontSizeBase: 128
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -171,6 +171,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Options
       objectReference: {fileID: 0}
+    - target: {fileID: 1267592313714561434, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b31c02b0a913421408b2add08542264c, type: 2}
+    - target: {fileID: 1267592313714561434, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -9002973016389683323, guid: b31c02b0a913421408b2add08542264c, type: 2}
     - target: {fileID: 1267592314598769364, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -300,6 +308,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Credits
       objectReference: {fileID: 0}
+    - target: {fileID: 1267592313714561434, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b31c02b0a913421408b2add08542264c, type: 2}
+    - target: {fileID: 1267592313714561434, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -9002973016389683323, guid: b31c02b0a913421408b2add08542264c, type: 2}
     - target: {fileID: 1267592314598769364, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -429,6 +445,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Play
       objectReference: {fileID: 0}
+    - target: {fileID: 1267592313714561434, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b31c02b0a913421408b2add08542264c, type: 2}
+    - target: {fileID: 1267592313714561434, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -9002973016389683323, guid: b31c02b0a913421408b2add08542264c, type: 2}
     - target: {fileID: 1267592314598769364, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -558,6 +582,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 1267592313714561434, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b31c02b0a913421408b2add08542264c, type: 2}
+    - target: {fileID: 1267592313714561434, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -9002973016389683323, guid: b31c02b0a913421408b2add08542264c, type: 2}
     - target: {fileID: 1267592314598769364, guid: bc88734fb92661d4ba960c61115db85a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
