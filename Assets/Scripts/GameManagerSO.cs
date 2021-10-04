@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "Game Manager", menuName = "Managers/Game Manager", order = 1)]
 public class GameManagerSO : ScriptableObject
 {
+    public int difficulty = 0;
+
     public void Menu()
     {
         SceneManager.LoadScene(0);
@@ -11,17 +13,20 @@ public class GameManagerSO : ScriptableObject
 
     public void PlayEasy()
     {
+        difficulty = 0;
         SceneManager.LoadScene(1);
     }
 
     public void PlayMedium()
     {
-        SceneManager.LoadScene(2);
+        difficulty = 1;
+        SceneManager.LoadScene(1);
     }
 
     public void PlayHard()
     {
-        SceneManager.LoadScene(3);
+        difficulty = 2;
+        SceneManager.LoadScene(1);
     }
 
     public void Exit()
