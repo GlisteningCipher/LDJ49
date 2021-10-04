@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BallPrefab: {fileID: 3562629426676198282, guid: eb11189a6f3ca3d43a412c6aad54b2a4, type: 3}
+  NormalBallPrefab: {fileID: 3562629426676198282, guid: eb11189a6f3ca3d43a412c6aad54b2a4, type: 3}
   ShootingDirection: {fileID: 1819664270093797232}
   shootSFX: {fileID: 1300243459766728748}
   ShootStrength: 1000
